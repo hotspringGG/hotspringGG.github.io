@@ -253,9 +253,9 @@
 					attrs: {
 						href: "https://mchotspring.press"
 					}
-				}, [t._v("热泉")]), n("a", {
+				}, [t._v("钟储兵博客")]), n("a", {
 					attrs: {
-						href: "mchotspring.press"
+						href: "https://github.com/geekape/geek-navigation"
 					}
 				}, [t._v("Hello world")])])])])
 			}],
