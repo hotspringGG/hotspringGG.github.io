@@ -1,21 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Language Toggle Logic (i18n)
+  // 语言切换
   const langToggleBtn = document.getElementById("lang-toggle");
   const i18nElements = document.querySelectorAll(".i18n");
-  
-  // Detect browser language or default to English
   let currentLang = navigator.language.startsWith('zh') ? 'zh' : 'en';
 
   const updateLanguage = () => {
     i18nElements.forEach(el => {
-      el.innerText = el.getAttribute(`data-${currentLang}`);
+      // 优先从 data 属性获取内容
+      const text = el.getAttribute(`data-${currentLang}`);
+      if (text) el.innerText = text;
     });
-    // Update button text to show the *other* language
     langToggleBtn.innerText = currentLang === 'en' ? '中文' : 'EN';
-    document.documentElement.lang = currentLang;
   };
-
-  // Initialize language
   updateLanguage();
 
   langToggleBtn.addEventListener("click", () => {
@@ -23,20 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
     updateLanguage();
   });
 
-  // 2. Scroll Reveal Animation
-  const revealElements = document.querySelectorAll(".reveal");
-
-  const revealObserver = new IntersectionObserver((entries, observer) => {
+  // 滚动进入动画
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("active");
-        // Optional: stop observing once revealed
-        observer.unobserve(entry.target);
       }
     });
-  }, {
-    threshold: 0.15 // Triggers when 15% of the element is visible
-  });
+  }, { threshold: 0.1 });
 
-  revealElements.forEach(el => revealObserver.observe(el));
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 });

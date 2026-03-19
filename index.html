@@ -7,115 +7,110 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Noto+Serif+SC:wght@600;900&family=Noto+Sans+SC:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:ital@0;1&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
   
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
   <link rel="stylesheet" href="styles.css" />
+  <meta name="color-scheme" content="dark">
 </head>
 <body>
 
   <nav class="navbar">
     <div class="nav-content">
-      <a href="#" class="logo">HotspringDev</a>
+      <a href="#" class="logo">HotspringDev.</a>
       <div class="nav-links">
         <a href="#about" class="i18n" data-en="About" data-zh="关于">About</a>
-        <a href="#skills" class="i18n" data-en="Skills" data-zh="技能">Skills</a>
-        <a href="#projects" class="i18n" data-en="Projects" data-zh="项目">Projects</a>
+        <a href="#projects" class="i18n" data-en="Work" data-zh="项目">Work</a>
         <button id="lang-toggle" class="lang-btn">中文</button>
       </div>
     </div>
   </nav>
 
-  <header class="hero" id="home">
-    <div class="hero-content reveal">
-      <div class="avatar-container">
-        <img src="assets/avatar.png" alt="HotspringDev Avatar" class="avatar" onerror="this.src='https://via.placeholder.com/150/0a0a0c/00bfff?text=H'">
-        <div class="glow"></div>
-      </div>
-      <h1 class="title">HotspringDev</h1>
-      <h2 class="subtitle i18n" data-en="Generalist Developer" data-zh="开发者 / 综合方向">Generalist Developer</h2>
-      <p class="tagline i18n" 
-         data-en='"EXHAUSTED BY EXISTENCE, HAUNTED BY EMPTINESS"' 
-         data-zh='"疲于存在，困于虚无"'>
-         "EXHAUSTED BY EXISTENCE, HAUNTED BY EMPTINESS"
-      </p>
-      <div class="hero-actions">
-        <a href="https://github.com/HotspringDev" target="_blank" class="btn btn-primary">
-          <i class="ph ph-github-logo"></i> <span class="i18n" data-en="GitHub" data-zh="GitHub">GitHub</span>
-        </a>
-        <a href="mailto:hotspring@requan.top" class="btn btn-secondary">
-          <i class="ph ph-envelope-simple"></i> <span class="i18n" data-en="Contact" data-zh="联系我">Contact</span>
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <section id="about" class="section">
-    <div class="section-content reveal">
-      <h3 class="section-title i18n" data-en="About Me" data-zh="关于我">About Me</h3>
-      <div class="about-grid">
-        <p class="about-text i18n" 
-           data-en="I spend my time tinkering with Arch Linux, writing scripts to automate things, and digging into how software works under the hood. I prefer building small, functional tools to solve specific problems I encounter—whether that's getting game controllers working properly or exploring binary patching. I value things that are lightweight and stay out of the way." 
-           data-zh="我平时主要在折腾 Arch Linux，写点脚本搞自动化，或者研究程序的底层运行逻辑。我更倾向于开发一些轻量且实用的工具来解决自己遇到的具体问题——比如让手柄在 Linux 下正常工作，或者研究二进制补丁。我追求的是简单、直接且不臃肿的设计。">
-          I spend my time tinkering with Arch Linux, writing scripts to automate things, and digging into how software works under the hood.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills" class="section">
-    <div class="section-content reveal">
-      <h3 class="section-title i18n" data-en="Tech Stack" data-zh="日常使用">Tech Stack</h3>
-      <div class="skills-container">
-        <span class="skill-tag">Linux (Arch)</span>
-        <span class="skill-tag">C / C++</span>
-        <span class="skill-tag">Reverse Engineering</span>
-        <span class="skill-tag">Proton / Wine</span>
-        <span class="skill-tag">PipeWire</span>
-        <span class="skill-tag">Shell Scripting</span>
-        <span class="skill-tag">Python</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="section">
-    <div class="section-content reveal">
-      <h3 class="section-title i18n" data-en="Projects" data-zh="项目">Projects</h3>
-      <div class="projects-grid">
+  <main>
+    <header class="hero" id="home">
+      <div class="hero-content reveal">
+        <div class="hero-header">
+          <img src="assets/avatar.png" alt="H" class="avatar-mini" onerror="this.src='https://via.placeholder.com/48/1d1d1f/ffffff?text=H'">
+          <h1 class="title">HotspringDev</h1>
+        </div>
         
-        <a href="https://github.com/HotspringDev/DualSense-haptic-helper" target="_blank" class="project-card">
-          <h4 class="project-title">DualSense-haptic-helper</h4>
-          <p class="project-desc i18n" 
-             data-en="A tool created to enable native PS5 DualSense haptic feedback in Linux games. It was primarily tested and used to get the full controller experience in Arknights: Endfield." 
-             data-zh="为了在 Linux 环境下开启 PS5 DualSense 手柄原生触觉反馈而写的工具。主要用于在《明日方舟：终末地》等游戏中获得完整的反馈体验。">
-             A tool created to enable native PS5 DualSense haptic feedback in Linux games.
-          </p>
-          <div class="project-tech"><span>C++</span><span>Linux Audio</span></div>
-        </a>
+        <h2 class="subtitle i18n" data-en="System & Reverse Engineer" data-zh="底层与逆向开发者">System & Reverse Engineer</h2>
+        
+        <div class="tagline-box">
+          <span class="tagline-mono i18n" 
+             data-en="/* EXHAUSTED BY EXISTENCE, HAUNTED BY EMPTINESS */" 
+             data-zh="/* 疲于存在，困于虚无 */">
+             /* EXHAUSTED BY EXISTENCE, HAUNTED BY EMPTINESS */
+          </span>
+        </div>
 
-        <a href="https://github.com/HotspringDev/navicat-16-crack" target="_blank" class="project-card">
-          <h4 class="project-title">navicat-16-crack</h4>
-          <p class="project-desc i18n" 
-             data-en="A practical exercise in reverse engineering. It demonstrates how to modify and patch binary files to bypass software protections." 
-             data-zh="一次逆向工程的实际练习。通过对二进制文件的修改和补丁，实现了对软件验证逻辑的绕过。">
-             A practical exercise in reverse engineering through binary modification and patching.
-          </p>
-          <div class="project-tech"><span>Reverse Engineering</span><span>Patching</span></div>
-        </a>
-
+        <div class="hero-actions">
+          <a href="https://github.com/HotspringDev" target="_blank" class="btn btn-primary">
+            <span class="i18n" data-en="View GitHub" data-zh="访问 GitHub">View GitHub</span>
+          </a>
+          <a href="mailto:hotspring@requan.top" class="btn btn-secondary">
+            <span class="i18n" data-en="Contact" data-zh="联系我">Contact</span>
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </header>
+
+    <section id="about" class="section">
+      <div class="bento-grid reveal">
+        <div class="bento-card col-span-2">
+          <h3 class="bento-label i18n" data-en="Philosophy" data-zh="理念">Philosophy</h3>
+          <p class="bento-text i18n" 
+             data-en="Focusing on Arch Linux optimization, Kernel-level mods, and reverse engineering. I prefer building lightweight, functional tools that stay out of the way." 
+             data-zh="专注于 Arch Linux 优化、内核级修改及逆向工程。比起华丽的界面，我更倾向于构建轻量、实用且不干扰用户的底层工具。">
+             Focusing on Arch Linux optimization, Kernel-level mods, and reverse engineering.
+          </p>
+        </div>
+
+        <div class="bento-card">
+          <h3 class="bento-label i18n" data-en="Stack" data-zh="技术栈">Stack</h3>
+          <div class="skills-list">
+            <span class="skill-item">C/C++</span>
+            <span class="skill-item">Arch Linux</span>
+            <span class="skill-item">RE</span>
+            <span class="skill-item">Proton</span>
+            <span class="skill-item">Shell</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h3 class="section-header reveal i18n" data-en="Projects." data-zh="项目。">Projects.</h3>
+      <div class="bento-grid reveal">
+        <a href="https://github.com/HotspringDev/DualSense-haptic-helper" target="_blank" class="bento-card project-card">
+          <div class="proj-top">
+            <i class="ph ph-game-controller"></i>
+            <span class="proj-title">DualSense-helper</span>
+          </div>
+          <p class="proj-desc i18n" data-en="Haptic feedback for Linux gaming." data-zh="为 Linux 游戏开启原生触觉反馈。">Haptic feedback for Linux gaming.</p>
+        </a>
+        <a href="https://github.com/HotspringDev/navicat-16-crack" target="_blank" class="bento-card project-card">
+          <div class="proj-top">
+            <i class="ph ph-terminal-window"></i>
+            <span class="proj-title">Binary-patching</span>
+          </div>
+          <p class="proj-desc i18n" data-en="Software protection bypass practice." data-zh="二进制补丁与逆向工程练习。">Software protection bypass practice.</p>
+        </a>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <div class="social-links">
-      <a href="https://github.com/HotspringDev" target="_blank" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
-      <a href="https://space.bilibili.com/555257620" target="_blank" aria-label="Bilibili"><i class="ph ph-television"></i></a>
-      <a href="https://www.youtube.com/@HotspringDev" target="_blank" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
-      <a href="https://www.reddit.com/user/HotspringDev/" target="_blank" aria-label="Reddit"><i class="ph ph-reddit-logo"></i></a>
-      <a href="mailto:hotspring@requan.top" aria-label="Email"><i class="ph ph-envelope-simple"></i></a>
+    <div class="footer-content">
+      <div class="social-icons">
+        <a href="https://github.com/HotspringDev" target="_blank" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+        <a href="https://space.bilibili.com/555257620" target="_blank" aria-label="Bilibili"><i class="ph ph-television"></i></a>
+        <a href="https://www.youtube.com/@HotspringDev" target="_blank" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+        <a href="https://www.reddit.com/user/HotspringDev/" target="_blank" aria-label="Reddit"><i class="ph ph-reddit-logo"></i></a>
+        <a href="mailto:hotspring@requan.top" aria-label="Email"><i class="ph ph-envelope-simple"></i></a>
+      </div>
+      <p class="copyright">© 2026 HotspringDev. <span class="i18n" data-en="100% Tracker Free." data-zh="无追踪器。">100% Tracker Free.</span></p>
     </div>
-    <p class="footer-text">© 2026 HotspringDev. <span class="i18n" data-en="100% Tracker Free." data-zh="无追踪器。">100% Tracker Free.</span></p>
   </footer>
 
   <script src="script.js"></script>
